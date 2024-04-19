@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.GH_PAT}}
       - name: npm run deploy
         uses: actions/setup-node@v3
         with:

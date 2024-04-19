@@ -10,22 +10,22 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_PAT}}
-      - name: npm run deploy
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "18"
           cache: "npm"
-          token: ${{ secrets.GH_PAT}}
-      - run: npm run deploy
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build and Deploy
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: npm run deploy

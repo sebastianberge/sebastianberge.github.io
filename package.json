@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "deploy-script.js",
+    "deploy": "node scripts/deploy-script.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

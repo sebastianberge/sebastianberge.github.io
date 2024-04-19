@@ -28,7 +28,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Build and Deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: npm run deploy
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # Branch to deploy to, set this to 'gh-pages'
+          folder: build # The folder the action should deploy.
+          token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in GITHUB_TOKEN for authentication
+
+
+      # - name: Build and Deploy
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_PAT }}
+      #   run: npm run deploy

@@ -20,9 +20,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: npm run deploy
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          token: $ {{ secrets.GITHUB_TOKEN}}
       - run: npm run deploy

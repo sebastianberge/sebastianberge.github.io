@@ -6,6 +6,7 @@ import AboutMe from "./pages/AboutMe";
 import Blog from "./pages/Blog";
 import Projects from "./pages/Projects";
 import PostDetail from "./pages/PostDetail";
+import CV from "./pages/CV";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog/:postId" element={<PostDetail />} />
+        <Route path="/cv" element={<CV />} />
       </Routes>
       <Footer />
     </Router>

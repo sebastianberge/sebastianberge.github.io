@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "highlight.js/styles/github.css"; // Import the CSS for highlight.js here
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

@@ -4,7 +4,6 @@ import { Box, Typography } from "@mui/material";
 import axios from "axios";
 import { marked } from "marked";
 import hljs from "highlight.js";
-import "highlight.js/styles/default.css";
 
 const renderer = new marked.Renderer();
 renderer.code = function (code, language) {
@@ -21,8 +20,11 @@ marked.setOptions({
     return hljs.highlight(code, { language }).value;
   },
   langPrefix: "hljs language-",
+  pedantic: false,
   breaks: true,
   gfm: true,
+  smartLists: true,
+  smartypants: false,
 });
 
 const PostDetail = () => {

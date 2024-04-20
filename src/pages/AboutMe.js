@@ -25,7 +25,7 @@ const AboutMe = () => {
       </Typography>
       <Box mt={2}>
         <Link
-          href="https://www.linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/sebastian-berge-05b53548/"
           target="_blank"
           rel="noopener"
         >
@@ -34,7 +34,7 @@ const AboutMe = () => {
           </Button>
         </Link>
         <Link
-          href="https://github.com/yourusername"
+          href="https://github.com/sebastianberge"
           target="_blank"
           rel="noopener"
           sx={{ ml: 1 }}

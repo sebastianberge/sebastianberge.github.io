@@ -10,8 +10,11 @@ const Navbar = () => {
           Sebastian Berge
         </Typography>
         <Box>
-          <Button color="inherit" component={RouterLink} to="/about">
+          <Button color="inherit" component={RouterLink} to="/">
             About Me
+          </Button>
+          <Button color="inherit" component={RouterLink} to="/blog">
+            Blog
           </Button>
           <Button color="inherit" component={RouterLink} to="/projects">
             Projects

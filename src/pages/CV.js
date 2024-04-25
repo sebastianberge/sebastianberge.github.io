@@ -9,7 +9,24 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import {
+  ArgocdOriginalWordmark,
+  GitOriginalWordmark,
+  GithubOriginalWordmark,
+  GithubactionsOriginal,
+  AzureOriginal,
+  AzuredevopsOriginal,
+  AzureOriginalWordmark,
+  TerraformOriginal,
+  YamlOriginal,
+  ReactOriginalWordmark,
+  LinuxOriginal,
+  KubernetesOriginal,
+  RedhatOriginalWordmark,
+  JavascriptOriginal,
+  Html5Original,
+  Css3Original,
+} from "devicons-react";
 
 const CV = () => {
   const experience = [
@@ -42,8 +59,22 @@ const CV = () => {
   ];
 
   const skills = [
-    { name: "Azure", icon: <GitHubIcon /> },
-    { name: "Azure DevOps", icon: null },
+    { name: "Azure", icon: <AzureOriginalWordmark /> },
+    { name: "Azure DevOps", icon: <AzuredevopsOriginal /> },
+    { name: "GitHub", icon: <GithubOriginalWordmark /> },
+    { name: "GitHub Actions", icon: <GithubactionsOriginal /> },
+    { name: "Git", icon: <GitOriginalWordmark /> },
+    { name: "Bicep", icon: <AzureOriginal /> },
+    { name: "Terraform", icon: <TerraformOriginal /> },
+    { name: "Yaml", icon: <YamlOriginal /> },
+    { name: "React", icon: <ReactOriginalWordmark /> },
+    { name: "Linux", icon: <LinuxOriginal /> },
+    { name: "Kubernetes", icon: <KubernetesOriginal /> },
+    { name: "Red Hat OpenShift", icon: <RedhatOriginalWordmark /> },
+    { name: "Argo CD", icon: <ArgocdOriginalWordmark /> },
+    { name: "Javascript", icon: <JavascriptOriginal /> },
+    { name: "HTML", icon: <Html5Original /> },
+    { name: "CSS", icon: <Css3Original /> },
   ];
 
   return (

@@ -47,21 +47,21 @@ const Blog = () => {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card>
               <CardContent>
-                <Typography variant="h5" component="div">
-                  <Link
-                    to={`/blog/${post.title}`}
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
+                <Link
+                  to={`/blog/${post.title}`}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Typography variant="h5" component="div">
                     {post.title}
-                  </Link>
-                </Typography>
-                <Typography color="text.secondary">
-                  Last updated: {post.date}
-                </Typography>
-                <Typography
-                  component="div"
-                  dangerouslySetInnerHTML={{ __html: post.html }}
-                />
+                  </Typography>
+                  <Typography color="text.secondary">
+                    Last updated: {post.date}
+                  </Typography>
+                  <Typography
+                    component="div"
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                  />
+                </Link>
               </CardContent>
             </Card>
           </Grid>

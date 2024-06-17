@@ -1,6 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: GitHub Pages Deployment
 
 on:
@@ -31,12 +28,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages # Branch to deploy to, set this to 'gh-pages'
-          folder: build # The folder the action should deploy.
-          token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in GITHUB_TOKEN for authentication
-
-
-      # - name: Build and Deploy
-      #   env:
-      #     GH_TOKEN: ${{ secrets.GH_PAT }}
-      #   run: npm run deploy
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.GITHUB_TOKEN }}

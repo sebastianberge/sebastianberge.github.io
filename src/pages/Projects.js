@@ -23,9 +23,7 @@ const projects = [
   // Add more projects as needed
 ];
 
-const Projects = () => {
-  return (
-    <Box p={3}>
+{/* <Box p={3}>
       <Typography variant="h4" gutterBottom>
         My Projects
       </Typography>
@@ -53,6 +51,15 @@ const Projects = () => {
           </Grid>
         ))}
       </Grid>
+    </Box> */}
+
+const Projects = () => {
+  return (
+    <Box p={3}>
+      <Typography variant="h4" gutterBottom>
+        My Projects
+      </Typography>
+      To be updated
     </Box>
   );
 };

@@ -75,6 +75,12 @@ const CV = () => {
     { name: "CSS", icon: <Css3Original /> },
   ];
 
+  const certifications = [
+    { name: "DevOps Engineer Expert", id: "AZ-400", issuer: "Microsoft" },
+    { name: "Azure Administrator Associate", id: "AZ-104", issuer: "Microsoft" },
+    { name: "Azure Fundamentals", id: "AZ-900", issuer: "Microsoft" },
+  ]
+
   return (
     <Box p={3}>
       <Typography variant="h4" gutterBottom>
@@ -114,6 +120,31 @@ const CV = () => {
               secondary={edu.institution + " - " + edu.years}
             />
           </ListItem>
+        ))}
+      </List>
+      <Typography variant="h6">Certifications</Typography>
+      <List>
+        {certifications.map((certification, index) => (
+          <React.Fragment key={index}>
+            <ListItem alignItems="flex-start">
+              <ListItemText
+                primary={certification.name}
+                secondary={
+                  <React.Fragment>
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      color="textPrimary"
+                    >
+                      {certification.issuer}
+                    </Typography>
+                    {" — " + certification.id}
+                  </React.Fragment>
+                }
+              />
+            </ListItem>
+            <Divider component="li" />
+          </React.Fragment>
         ))}
       </List>
       <Typography variant="h6">Skills</Typography>

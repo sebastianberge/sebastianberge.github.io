@@ -23,9 +23,11 @@ const Navbar = () => {
           <Button color="inherit" href="#cv-section">
             CV
           </Button>
-          <Button color="inherit">Blog</Button>
           <Button color="inherit" href="#projects-section">
             Projects
+          </Button>
+          <Button color="inherit" href="#social-section">
+            Connect
           </Button>
         </Box>
       </Toolbar>

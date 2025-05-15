@@ -18,18 +18,43 @@ import axios from "axios";
 
 const CV = () => {
   const [posts, setPosts] = useState([]);
-  const skills = ["React", "Node.js", "JavaScript", "HTML/CSS", "Git", "SQL"];
+  const skills = [
+    "React",
+    "Node.js",
+    "JavaScript",
+    "HTML/CSS",
+    "Git",
+    "SQL",
+    "React",
+    "Node.js",
+    "JavaScript",
+    "HTML/CSS",
+    "Git",
+    "SQL",
+  ];
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuedBy: "Amazon Web Services",
-      date: "July 2021",
+      title: "DevOps Engineer Expert",
+      issuedBy: "Microsoft",
+      date: "October 2022",
       url: "https://example.com/aws-cert",
     },
     {
-      title: "Kubernetes Administrator",
-      issuedBy: "The Linux Foundation",
-      date: "March 2022",
+      title: "Azure Administrator Associate",
+      issuedBy: "Microsoft",
+      date: "September 2022",
+      url: "https://example.com/k8s-cert",
+    },
+    {
+      title: "NSM grunnprinsipper for IKT-sikkerhet",
+      issuedBy: "Nasjonal sikkerhetsmyndighet",
+      date: "October 2022",
+      url: "https://example.com/k8s-cert",
+    },
+    {
+      title: "Azure Fundamentals",
+      issuedBy: "Microsoft",
+      date: "July 2022",
       url: "https://example.com/k8s-cert",
     },
   ];
@@ -55,25 +80,112 @@ const CV = () => {
       >
         <Grid container spacing={3} sx={{ mb: 6 }}>
           <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#333",
+                color: "#fff",
+              }}
+            >
               <Typography variant="h5" gutterBottom>
-                Skills
+                Experience
               </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap">
-                {skills.map((skill, i) => (
-                  <Chip
-                    key={i}
-                    label={skill}
-                    color="primary"
-                    variant="outlined"
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary="Senior Cloud & DevOps Engineer – Devoteam M Cloud"
+                    secondary="2024 – Present | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#fff", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
                   />
-                ))}
-              </Stack>
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="Cloud Engineer – Tietoevry Tech Services"
+                    secondary="2022 – 2024 | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#fff", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="Solution Consultant – Tietoevry Banking"
+                    secondary="2020 – 2022 | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#fff", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                  />
+                </ListItem>
+              </List>
             </Card>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Stack spacing={3}>
+              <Card
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  backgroundColor: "#333",
+                  color: "#fff",
+                }}
+              >
+                <Typography variant="h5" gutterBottom>
+                  Skills
+                </Typography>
+                <Stack direction="row" flexWrap="wrap" rowGap={1}>
+                  {skills.map((skill, i) => (
+                    <Chip
+                      key={i}
+                      label={skill}
+                      variant="outlined"
+                      sx={{ color: "#fff", borderColor: "#fff", mr: 1 }}
+                    />
+                  ))}
+                </Stack>
+              </Card>
+
+              <Card
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  backgroundColor: "#333",
+                  color: "#fff",
+                }}
+              >
+                <Typography variant="h5" gutterBottom>
+                  Education
+                </Typography>
+                <List>
+                  <ListItem>
+                    <ListItemText
+                      primary="B.Sc. in Computer Engineering – Western Norway University of Applied Sciences"
+                      secondary="2017 – 2020"
+                      primaryTypographyProps={{
+                        sx: { color: "#fff", fontWeight: "bold" },
+                      }}
+                      secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                    />
+                  </ListItem>
+                </List>
+              </Card>
+            </Stack>
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#333",
+                color: "#fff",
+              }}
+            >
               <Typography variant="h5" gutterBottom>
                 Certifications
               </Typography>
@@ -87,35 +199,17 @@ const CV = () => {
                           Issued by {cert.issuedBy}, {cert.date}
                           <br />
                           <Link href={cert.url} target="_blank" rel="noopener">
-                            View Certificate
+                            View →
                           </Link>
                         </>
                       }
+                      primaryTypographyProps={{
+                        sx: { color: "#fff", fontWeight: "bold" },
+                      }}
+                      secondaryTypographyProps={{ sx: { color: "#ccc" } }}
                     />
                   </ListItem>
                 ))}
-              </List>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
-              <Typography variant="h5" gutterBottom>
-                Experience & Education
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    primary="Software Developer – Tech Solutions Inc."
-                    secondary="2020 – Present | Frontend development using React and Node.js."
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="B.Sc. in Computer Science – University of Tech"
-                    secondary="2014 – 2018"
-                  />
-                </ListItem>
               </List>
             </Card>
           </Grid>

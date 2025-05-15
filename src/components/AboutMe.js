@@ -36,6 +36,7 @@ const AboutMe = () => {
 
   return (
     <Box
+      id="aboutme-section"
       sx={{
         height: "100vh",
         backgroundImage: "url('/images/bergen.jpeg')",
@@ -76,15 +77,15 @@ const AboutMe = () => {
         <Button
           variant="contained"
           color="inherit"
-          href="#next-section"
+          href="#cv-section"
           sx={{
             position: "absolute",
             bottom: 40,
-            backgroundColor: "#333",
-            color: "#fff",
+            backgroundColor: "#fff",
+            color: "#333",
             "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
+              backgroundColor: "#333",
+              color: "#fff",
             },
           }}
         >

@@ -17,10 +17,16 @@ const Navbar = () => {
           Sebastian Berge
         </Typography>
         <Box>
-          <Button color="inherit">About Me</Button>
+          <Button color="inherit" href="#aboutme-section">
+            About Me
+          </Button>
+          <Button color="inherit" href="#cv-section">
+            CV
+          </Button>
           <Button color="inherit">Blog</Button>
-          <Button color="inherit">CV</Button>
-          <Button color="inherit">Projects</Button>
+          <Button color="inherit" href="#projects-section">
+            Projects
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

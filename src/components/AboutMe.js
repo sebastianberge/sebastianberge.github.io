@@ -88,7 +88,7 @@ const AboutMe = () => {
             },
           }}
         >
-          Learn More
+          CV ↓
         </Button>
       </Box>
     </Box>

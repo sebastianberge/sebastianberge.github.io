@@ -16,6 +16,7 @@ import {
 import AboutMe from "../components/AboutMe";
 import CV from "../components/CV";
 import Projects from "../components/Projects";
+import Social from "../components/Social";
 import axios from "axios";
 
 const Home = () => {
@@ -49,6 +50,7 @@ const Home = () => {
       <AboutMe />
       <CV />
       <Projects />
+      <Social />
     </React.Fragment>
   );
 };

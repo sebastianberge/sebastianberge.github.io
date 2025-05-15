@@ -57,7 +57,14 @@ const Projects = () => {
       >
         <Grid container spacing={3} sx={{ mb: 6 }}>
           <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#fff",
+                color: "#333",
+              }}
+            >
               <Typography variant="h5" gutterBottom>
                 Skills
               </Typography>
@@ -75,7 +82,14 @@ const Projects = () => {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#fff",
+                color: "#333",
+              }}
+            >
               <Typography variant="h5" gutterBottom>
                 Certifications
               </Typography>
@@ -101,7 +115,14 @@ const Projects = () => {
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <Card sx={{ p: 3, height: "100%" }}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#fff",
+                color: "#333",
+              }}
+            >
               <Typography variant="h5" gutterBottom>
                 Experience & Education
               </Typography>
@@ -126,7 +147,7 @@ const Projects = () => {
       <Button
         variant="contained"
         color="inherit"
-        href="#projects-section"
+        href="#social-section"
         sx={{
           position: "absolute",
           bottom: 40,
@@ -140,7 +161,7 @@ const Projects = () => {
           },
         }}
       >
-        Button ↓
+        Connect ↓
       </Button>
     </Box>
   );

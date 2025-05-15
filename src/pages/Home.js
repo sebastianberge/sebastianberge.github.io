@@ -14,6 +14,8 @@ import {
   Link,
 } from "@mui/material";
 import AboutMe from "../components/AboutMe";
+import CV from "../components/CV";
+import Projects from "../components/Projects";
 import axios from "axios";
 
 const Home = () => {
@@ -45,6 +47,8 @@ const Home = () => {
   return (
     <React.Fragment>
       <AboutMe />
+      <CV />
+      <Projects />
     </React.Fragment>
   );
 };

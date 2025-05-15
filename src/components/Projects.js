@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 
-const CV = () => {
+const Projects = () => {
   const [posts, setPosts] = useState([]);
   const skills = ["React", "Node.js", "JavaScript", "HTML/CSS", "Git", "SQL"];
   const certifications = [
@@ -36,7 +36,7 @@ const CV = () => {
 
   return (
     <Box
-      id="cv-section"
+      id="projects-section"
       sx={{
         minHeight: "100vh",
         position: "relative",
@@ -44,6 +44,8 @@ const CV = () => {
         alignItems: "center",
         justifyContent: "center",
         px: 2,
+        backgroundColor: "#333",
+        color: "#fff",
       }}
     >
       <Box
@@ -130,18 +132,18 @@ const CV = () => {
           bottom: 40,
           left: "50%",
           transform: "translateX(-50%)",
-          backgroundColor: "#333",
-          color: "#fff",
+          backgroundColor: "#fff",
+          color: "#333",
           "&:hover": {
-            backgroundColor: "#fff",
-            color: "#333",
+            backgroundColor: "#333",
+            color: "#fff",
           },
         }}
       >
-        Projects ↓
+        Button ↓
       </Button>
     </Box>
   );
 };
 
-export default CV;
+export default Projects;

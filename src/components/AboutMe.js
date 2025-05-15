@@ -60,20 +60,31 @@ const AboutMe = () => {
           zIndex: 1,
         }}
       >
-        <Avatar
-          sx={{ width: 100, height: 100, mb: 2 }}
-          src="/images/profile-image.jpeg"
-          alt="Image of Sebastian Berge"
-        />
-        <Typography variant="h4">Hi, I'm Sebastian</Typography>
-        <Typography variant="body1" sx={{ maxWidth: 600, mt: 2 }}>
-          A passionate Senior Cloud & DevOps Engineer with a keen interest in
-          cloud computing and basically anything techonlogy related. With over 4
-          years of experience in the tech industry, I've developed a strong
-          skill set within the DevOps and Cloud fields. I'm always looking to
-          take on new challenges and grow my skills, whether that's learning new
-          frameworks or diving deeper into backend technologies.
-        </Typography>
+        <Card
+          sx={{
+            p: 4,
+            maxWidth: 600,
+            backgroundColor: "#fff",
+            color: "#333",
+            display: "inline-block",
+            textAlign: "center",
+          }}
+        >
+          <Avatar
+            sx={{ width: 100, height: 100, mb: 2, mx: "auto" }}
+            src="/images/profile-image.jpeg"
+            alt="Image of Sebastian Berge"
+          />
+          <Typography variant="h4">Hi, I'm Sebastian</Typography>
+          <Typography variant="body1" sx={{ maxWidth: 600, mt: 2 }}>
+            A passionate Senior Cloud & DevOps Engineer with a keen interest in
+            cloud computing and basically anything techonlogy related. With over
+            4 years of experience in the tech industry, I've developed a strong
+            skill set within the DevOps and Cloud fields. I'm always looking to
+            take on new challenges and grow my skills, whether that's learning
+            new frameworks or diving deeper into backend technologies.
+          </Typography>
+        </Card>
         <Button
           variant="contained"
           color="inherit"

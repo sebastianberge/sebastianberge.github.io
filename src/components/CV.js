@@ -37,25 +37,21 @@ const CV = () => {
       title: "DevOps Engineer Expert",
       issuedBy: "Microsoft",
       date: "October 2022",
-      url: "https://example.com/aws-cert",
     },
     {
       title: "Azure Administrator Associate",
       issuedBy: "Microsoft",
       date: "September 2022",
-      url: "https://example.com/k8s-cert",
     },
     {
       title: "NSM grunnprinsipper for IKT-sikkerhet",
       issuedBy: "Nasjonal sikkerhetsmyndighet",
       date: "October 2022",
-      url: "https://example.com/k8s-cert",
     },
     {
       title: "Azure Fundamentals",
       issuedBy: "Microsoft",
       date: "July 2022",
-      url: "https://example.com/k8s-cert",
     },
   ];
 
@@ -198,15 +194,12 @@ const CV = () => {
                         <>
                           Issued by {cert.issuedBy}, {cert.date}
                           <br />
-                          <Link href={cert.url} target="_blank" rel="noopener">
-                            View →
-                          </Link>
                         </>
                       }
                       primaryTypographyProps={{
                         sx: { color: "#fff", fontWeight: "bold" },
                       }}
-                      secondaryTypographyProps={{ sx: { color: "#ccc" } }}
+                      secondaryTypographyProps={{ sx: { color: "#fff" } }}
                     />
                   </ListItem>
                 ))}

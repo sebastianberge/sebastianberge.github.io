@@ -44,7 +44,7 @@ const Projects = () => {
         alignItems: "center",
         justifyContent: "center",
         px: 2,
-        backgroundColor: "#333",
+        backgroundColor: "#000",
         color: "#fff",
       }}
     >
@@ -172,23 +172,30 @@ const Projects = () => {
         </Grid>
       </Box>
       <Button
-        variant="contained"
-        color="inherit"
+        variant="outlined"
         href="#social-section"
         sx={{
           position: "absolute",
           bottom: 40,
           left: "50%",
           transform: "translateX(-50%)",
-          backgroundColor: "#fff",
-          color: "#333",
+          mt: 5,
+          px: 2,
+          py: 1,
+          borderRadius: 999,
+          fontWeight: 500,
+          fontSize: "0.8rem",
+          borderColor: "#0271e3",
+          backgroundColor: "#000",
+          textTransform: "none",
+          color: "#0271e3",
           "&:hover": {
-            backgroundColor: "#333",
+            backgroundColor: "#0271e3",
             color: "#fff",
           },
         }}
       >
-        Connect ↓
+        Connect
       </Button>
     </Box>
   );

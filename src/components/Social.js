@@ -39,45 +39,55 @@ const Social = () => {
       id="social-section"
       sx={{
         minHeight: "100vh",
-        backgroundColor: "#fff", // white background
-        color: "#444", // dark gray text
+        backgroundColor: "#fff",
+        color: "#000",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         px: 2,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
       }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h3" gutterBottom sx={{ fontWeight: 300 }}>
         Connect with Me
       </Typography>
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={3} mt={4}>
         <Button
-          variant="contained"
+          variant="outlined"
           href="https://github.com/sebastianberge"
           target="_blank"
           sx={{
-            backgroundColor: "#333",
-            color: "#fff",
+            px: 4,
+            py: 1.5,
+            borderRadius: 999,
+            borderColor: "#000",
+            color: "#000",
+            fontWeight: 500,
             "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
+              backgroundColor: "#000",
+              color: "#fff",
             },
           }}
         >
           GitHub
         </Button>
         <Button
-          variant="contained"
+          variant="outlined"
           href="https://www.linkedin.com/in/sebastian-berge-05b53548/"
           target="_blank"
           sx={{
-            backgroundColor: "#333",
-            color: "#fff",
+            px: 4,
+            py: 1.5,
+            borderRadius: 999,
+            borderColor: "#000",
+            color: "#000",
+            fontWeight: 500,
             "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
+              backgroundColor: "#000",
+              color: "#fff",
             },
           }}
         >

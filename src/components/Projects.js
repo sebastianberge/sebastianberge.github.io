@@ -184,7 +184,7 @@ const Projects = () => {
           py: 1,
           borderRadius: 999,
           fontWeight: 500,
-          fontSize: "0.8rem",
+          fontSize: "1rem",
           borderColor: "#0271e3",
           backgroundColor: "#000",
           textTransform: "none",

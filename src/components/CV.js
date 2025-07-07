@@ -84,8 +84,7 @@ const CV = () => {
                 p: 4,
                 height: "100%",
                 backgroundColor: "#fff",
-                color: "#333",
-                border: "1px solid #e0e0e0",
+                color: "#000",
                 boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
                 borderRadius: 3,
               }}
@@ -101,31 +100,49 @@ const CV = () => {
                 <ListItem>
                   <ListItemText
                     primary="Senior Cloud & DevOps Engineer – Devoteam M Cloud"
-                    secondary="2024 – Present | Frontend development using React and Node.js."
+                    secondary="2024 – Present | Cloud, DevOps & Architecture"
                     primaryTypographyProps={{
-                      sx: { color: "#333", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#666" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
                     primary="Cloud Engineer – Tietoevry Tech Services"
-                    secondary="2022 – 2024 | Frontend development using React and Node.js."
+                    secondary="2022 – 2024 | Cloud & DevOps"
                     primaryTypographyProps={{
-                      sx: { color: "#333", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#666" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
                     primary="Solution Consultant – Tietoevry Banking"
-                    secondary="2020 – 2022 | Frontend development using React and Node.js."
+                    secondary="2020 – 2022 | DevOps, Operations & Kubernetes"
                     primaryTypographyProps={{
-                      sx: { color: "#333", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#666" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
               </List>
@@ -138,8 +155,7 @@ const CV = () => {
                   p: 4,
                   height: "100%",
                   backgroundColor: "#fff",
-                  color: "#333",
-                  border: "1px solid #e0e0e0",
+                  color: "#000",
                   boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
                   borderRadius: 3,
                 }}
@@ -158,12 +174,13 @@ const CV = () => {
                       label={skill}
                       variant="outlined"
                       sx={{
-                        color: "#333",
-                        borderColor: "#e0e0e0",
-                        backgroundColor: "#fafafa",
+                        color: "#0271e3",
+                        borderColor: "#0271e3",
+                        backgroundColor: "transparent",
                         mr: 1,
                         mb: 1,
                         fontWeight: 500,
+                        fontSize: "1rem",
                       }}
                     />
                   ))}
@@ -175,8 +192,7 @@ const CV = () => {
                   p: 4,
                   height: "100%",
                   backgroundColor: "#fff",
-                  color: "#333",
-                  border: "1px solid #e0e0e0",
+                  color: "#000",
                   boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
                   borderRadius: 3,
                 }}
@@ -194,9 +210,15 @@ const CV = () => {
                       primary="B.Sc. in Computer Engineering – Western Norway University of Applied Sciences"
                       secondary="2017 – 2020"
                       primaryTypographyProps={{
-                        sx: { color: "#333", fontWeight: "bold" },
+                        sx: {
+                          color: "#000",
+                          fontWeight: "600",
+                          fontSize: "1rem",
+                        },
                       }}
-                      secondaryTypographyProps={{ sx: { color: "#666" } }}
+                      secondaryTypographyProps={{
+                        sx: { color: "#000", fontSize: "1rem" },
+                      }}
                     />
                   </ListItem>
                 </List>
@@ -210,8 +232,7 @@ const CV = () => {
                 p: 4,
                 height: "100%",
                 backgroundColor: "#fff",
-                color: "#333",
-                border: "1px solid #e0e0e0",
+                color: "#000",
                 boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
                 borderRadius: 3,
               }}
@@ -235,9 +256,15 @@ const CV = () => {
                         </>
                       }
                       primaryTypographyProps={{
-                        sx: { color: "#333", fontWeight: "bold" },
+                        sx: {
+                          color: "#000",
+                          fontWeight: "600",
+                          fontSize: "1rem",
+                        },
                       }}
-                      secondaryTypographyProps={{ sx: { color: "#666" } }}
+                      secondaryTypographyProps={{
+                        sx: { color: "#000", fontSize: "1rem" },
+                      }}
                     />
                   </ListItem>
                 ))}
@@ -259,7 +286,7 @@ const CV = () => {
           py: 1,
           borderRadius: 999,
           fontWeight: 500,
-          fontSize: "0.8rem",
+          fontSize: "1rem",
           borderColor: "#0271e3",
           backgroundColor: "#0271e3",
           textTransform: "none",

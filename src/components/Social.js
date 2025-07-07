@@ -39,7 +39,7 @@ const Social = () => {
       id="social-section"
       sx={{
         minHeight: "100vh",
-        backgroundColor: "#fff",
+        backgroundColor: "#f5f5f7",
         color: "#000",
         display: "flex",
         flexDirection: "column",
@@ -51,24 +51,30 @@ const Social = () => {
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
       }}
     >
-      <Typography variant="h3" gutterBottom sx={{ fontWeight: 300 }}>
+      <Typography
+        variant="h3"
+        gutterBottom
+        sx={{ fontWeight: 600, fontSize: "2rem" }}
+      >
         Connect with Me
       </Typography>
       <Stack direction="row" spacing={3} mt={4}>
         <Button
           variant="outlined"
           href="https://github.com/sebastianberge"
-          target="_blank"
           sx={{
-            px: 4,
-            py: 1.5,
+            mt: 5,
+            px: 2,
+            py: 1,
             borderRadius: 999,
-            borderColor: "#000",
-            color: "#000",
             fontWeight: 500,
+            fontSize: "1rem",
+            borderColor: "#0271e3",
+            backgroundColor: "#0271e3",
+            textTransform: "none",
+            color: "#fff",
             "&:hover": {
-              backgroundColor: "#000",
-              color: "#fff",
+              backgroundColor: "rgba(002, 113, 227, 0.8)",
             },
           }}
         >
@@ -77,16 +83,19 @@ const Social = () => {
         <Button
           variant="outlined"
           href="https://www.linkedin.com/in/sebastian-berge-05b53548/"
-          target="_blank"
           sx={{
-            px: 4,
-            py: 1.5,
+            mt: 5,
+            px: 2,
+            py: 1,
             borderRadius: 999,
-            borderColor: "#000",
-            color: "#000",
             fontWeight: 500,
+            fontSize: "1rem",
+            borderColor: "#0271e3",
+            backgroundColor: "transparent",
+            textTransform: "none",
+            color: "#0271e3",
             "&:hover": {
-              backgroundColor: "#000",
+              backgroundColor: "#0271e3",
               color: "#fff",
             },
           }}

@@ -32,24 +32,43 @@ const AboutMe = () => {
       <Box
         sx={{
           position: "absolute",
+          bottom: 0,
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-start",
+          pl: 4,
+          zIndex: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src="/images/sebavatar.png"
+          alt="Image of Sebastian Berge"
+          sx={{
+            width: "30%",
+            maxHeight: "30%",
+            objectFit: "cover",
+            opacity: 0.6,
+          }}
+        />
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
           inset: 0,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           textAlign: "center",
           color: "#000",
           zIndex: 1,
           px: 2,
+          pt: 8,
           fontFamily:
             "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
         }}
       >
-        <Avatar
-          sx={{ width: 120, height: 120, mb: 3 }}
-          src="/images/profile-image.jpeg"
-          alt="Image of Sebastian Berge"
-        />
         <Typography variant="h5" sx={{ fontWeight: 600, fontSize: "2rem" }}>
           Hi, I'm Sebastian
         </Typography>
@@ -86,7 +105,7 @@ const AboutMe = () => {
               py: 1,
               borderRadius: 999,
               fontWeight: 500,
-              fontSize: "0.8rem",
+              fontSize: "1rem",
               borderColor: "#0271e3",
               backgroundColor: "#0271e3",
               textTransform: "none",
@@ -107,7 +126,7 @@ const AboutMe = () => {
               py: 1,
               borderRadius: 999,
               fontWeight: 500,
-              fontSize: "0.8rem",
+              fontSize: "1rem",
               borderColor: "#0271e3",
               backgroundColor: "transparent",
               textTransform: "none",

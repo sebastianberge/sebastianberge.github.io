@@ -39,45 +39,64 @@ const Social = () => {
       id="social-section"
       sx={{
         minHeight: "100vh",
-        backgroundColor: "#fff", // white background
-        color: "#444", // dark gray text
+        backgroundColor: "#f5f5f7",
+        color: "#000",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         px: 2,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
       }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        variant="h3"
+        gutterBottom
+        sx={{ fontWeight: 600, fontSize: "2rem" }}
+      >
         Connect with Me
       </Typography>
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={3} mt={4}>
         <Button
-          variant="contained"
+          variant="outlined"
           href="https://github.com/sebastianberge"
-          target="_blank"
           sx={{
-            backgroundColor: "#333",
+            mt: 5,
+            px: 2,
+            py: 1,
+            borderRadius: 999,
+            fontWeight: 500,
+            fontSize: "1rem",
+            borderColor: "#0271e3",
+            backgroundColor: "#0271e3",
+            textTransform: "none",
             color: "#fff",
             "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
+              backgroundColor: "rgba(002, 113, 227, 0.8)",
             },
           }}
         >
           GitHub
         </Button>
         <Button
-          variant="contained"
+          variant="outlined"
           href="https://www.linkedin.com/in/sebastian-berge-05b53548/"
-          target="_blank"
           sx={{
-            backgroundColor: "#333",
-            color: "#fff",
+            mt: 5,
+            px: 2,
+            py: 1,
+            borderRadius: 999,
+            fontWeight: 500,
+            fontSize: "1rem",
+            borderColor: "#0271e3",
+            backgroundColor: "transparent",
+            textTransform: "none",
+            color: "#0271e3",
             "&:hover": {
-              backgroundColor: "#fff",
-              color: "#333",
+              backgroundColor: "#0271e3",
+              color: "#fff",
             },
           }}
         >

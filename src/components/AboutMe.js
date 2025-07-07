@@ -17,29 +17,12 @@ import {
 import axios from "axios";
 
 const AboutMe = () => {
-  const [posts, setPosts] = useState([]);
-  const skills = ["React", "Node.js", "JavaScript", "HTML/CSS", "Git", "SQL"];
-  const certifications = [
-    {
-      title: "AWS Certified Solutions Architect",
-      issuedBy: "Amazon Web Services",
-      date: "July 2021",
-      url: "https://example.com/aws-cert",
-    },
-    {
-      title: "Kubernetes Administrator",
-      issuedBy: "The Linux Foundation",
-      date: "March 2022",
-      url: "https://example.com/k8s-cert",
-    },
-  ];
-
   return (
     <Box
       id="aboutme-section"
       sx={{
         height: "100vh",
-        backgroundImage: "url('/images/bergen.jpeg')",
+        background: "linear-gradient(to bottom, #daecf6 0%, #ffffff 100%)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
@@ -49,24 +32,57 @@ const AboutMe = () => {
       <Box
         sx={{
           position: "absolute",
+          bottom: 0,
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-start",
+          pl: 4,
+          zIndex: 0,
+        }}
+      >
+        <Box
+          component="img"
+          src="/images/sebavatar.png"
+          alt="Image of Sebastian Berge"
+          sx={{
+            width: "30%",
+            maxHeight: "30%",
+            objectFit: "cover",
+            opacity: 0.6,
+          }}
+        />
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(51, 51, 51, 0.5)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           textAlign: "center",
-          color: "#fff",
+          color: "#000",
           zIndex: 1,
+          px: 2,
+          pt: 8,
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
         }}
       >
-        <Avatar
-          sx={{ width: 100, height: 100, mb: 2 }}
-          src="/images/profile-image.jpeg"
-          alt="Image of Sebastian Berge"
-        />
-        <Typography variant="h4">Hi, I'm Sebastian</Typography>
-        <Typography variant="body1" sx={{ maxWidth: 600, mt: 2 }}>
+        <Typography variant="h5" sx={{ fontWeight: 600, fontSize: "2rem" }}>
+          Hi, I'm Sebastian
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            maxWidth: 700,
+            mt: 3,
+            px: 2,
+            fontWeight: 300,
+            fontSize: "1rem",
+            lineHeight: 1.6,
+          }}
+        >
           A passionate Senior Cloud & DevOps Engineer with a keen interest in
           cloud computing and basically anything techonlogy related. With over 4
           years of experience in the tech industry, I've developed a strong
@@ -74,23 +90,56 @@ const AboutMe = () => {
           take on new challenges and grow my skills, whether that's learning new
           frameworks or diving deeper into backend technologies.
         </Typography>
-        <Button
-          variant="contained"
-          color="inherit"
-          href="#cv-section"
-          sx={{
-            position: "absolute",
-            bottom: 40,
-            backgroundColor: "#fff",
-            color: "#333",
-            "&:hover": {
-              backgroundColor: "#333",
-              color: "#fff",
-            },
-          }}
+        <Stack
+          direction="row"
+          spacing={3}
+          mt={4}
+          sx={{ position: "absolute", bottom: 40 }}
         >
-          CV ↓
-        </Button>
+          <Button
+            variant="outlined"
+            href="#cv-section"
+            sx={{
+              mt: 5,
+              px: 2,
+              py: 1,
+              borderRadius: 999,
+              fontWeight: 500,
+              fontSize: "1rem",
+              borderColor: "#0271e3",
+              backgroundColor: "#0271e3",
+              textTransform: "none",
+              color: "#fff",
+              "&:hover": {
+                backgroundColor: "rgba(002, 113, 227, 0.8)",
+              },
+            }}
+          >
+            More
+          </Button>
+          <Button
+            variant="outlined"
+            href="#social-section"
+            sx={{
+              mt: 5,
+              px: 2,
+              py: 1,
+              borderRadius: 999,
+              fontWeight: 500,
+              fontSize: "1rem",
+              borderColor: "#0271e3",
+              backgroundColor: "transparent",
+              textTransform: "none",
+              color: "#0271e3",
+              "&:hover": {
+                backgroundColor: "#0271e3",
+                color: "#fff",
+              },
+            }}
+          >
+            Connect
+          </Button>
+        </Stack>
       </Box>
     </Box>
   );

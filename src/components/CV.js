@@ -37,25 +37,21 @@ const CV = () => {
       title: "DevOps Engineer Expert",
       issuedBy: "Microsoft",
       date: "October 2022",
-      url: "https://example.com/aws-cert",
     },
     {
       title: "Azure Administrator Associate",
       issuedBy: "Microsoft",
       date: "September 2022",
-      url: "https://example.com/k8s-cert",
     },
     {
       title: "NSM grunnprinsipper for IKT-sikkerhet",
       issuedBy: "Nasjonal sikkerhetsmyndighet",
       date: "October 2022",
-      url: "https://example.com/k8s-cert",
     },
     {
       title: "Azure Fundamentals",
       issuedBy: "Microsoft",
       date: "July 2022",
-      url: "https://example.com/k8s-cert",
     },
   ];
 
@@ -69,6 +65,9 @@ const CV = () => {
         alignItems: "center",
         justifyContent: "center",
         px: 2,
+        backgroundColor: "#f5f5f7",
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
       }}
     >
       <Box
@@ -78,73 +77,111 @@ const CV = () => {
           mx: "auto",
         }}
       >
-        <Grid container spacing={3} sx={{ mb: 6 }}>
+        <Grid container spacing={4} sx={{ mb: 8 }}>
           <Grid item xs={12} md={4}>
             <Card
               sx={{
-                p: 3,
+                p: 4,
                 height: "100%",
-                backgroundColor: "#333",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#000",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
+                borderRadius: 3,
               }}
             >
-              <Typography variant="h5" gutterBottom>
+              <Typography
+                variant="h4"
+                gutterBottom
+                sx={{ fontWeight: 600, fontSize: "2rem" }}
+              >
                 Experience
               </Typography>
               <List>
                 <ListItem>
                   <ListItemText
                     primary="Senior Cloud & DevOps Engineer – Devoteam M Cloud"
-                    secondary="2024 – Present | Frontend development using React and Node.js."
+                    secondary="2024 – Present | Cloud, DevOps & Architecture"
                     primaryTypographyProps={{
-                      sx: { color: "#fff", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
                     primary="Cloud Engineer – Tietoevry Tech Services"
-                    secondary="2022 – 2024 | Frontend development using React and Node.js."
+                    secondary="2022 – 2024 | Cloud & DevOps"
                     primaryTypographyProps={{
-                      sx: { color: "#fff", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
                     primary="Solution Consultant – Tietoevry Banking"
-                    secondary="2020 – 2022 | Frontend development using React and Node.js."
+                    secondary="2020 – 2022 | DevOps, Operations & Kubernetes"
                     primaryTypographyProps={{
-                      sx: { color: "#fff", fontWeight: "bold" },
+                      sx: {
+                        color: "#000",
+                        fontWeight: "600",
+                        fontSize: "1rem",
+                      },
                     }}
-                    secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                    secondaryTypographyProps={{
+                      sx: { color: "#000", fontSize: "1rem" },
+                    }}
                   />
                 </ListItem>
               </List>
             </Card>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Stack spacing={3}>
+            <Stack spacing={4}>
               <Card
                 sx={{
-                  p: 3,
+                  p: 4,
                   height: "100%",
-                  backgroundColor: "#333",
-                  color: "#fff",
+                  backgroundColor: "#fff",
+                  color: "#000",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
+                  borderRadius: 3,
                 }}
               >
-                <Typography variant="h5" gutterBottom>
+                <Typography
+                  variant="h4"
+                  gutterBottom
+                  sx={{ fontWeight: 600, fontSize: "2rem" }}
+                >
                   Skills
                 </Typography>
-                <Stack direction="row" flexWrap="wrap" rowGap={1}>
+                <Stack direction="row" flexWrap="wrap" rowGap={1} columnGap={1}>
                   {skills.map((skill, i) => (
                     <Chip
                       key={i}
                       label={skill}
                       variant="outlined"
-                      sx={{ color: "#fff", borderColor: "#fff", mr: 1 }}
+                      sx={{
+                        color: "#0271e3",
+                        borderColor: "#0271e3",
+                        backgroundColor: "transparent",
+                        mr: 1,
+                        mb: 1,
+                        fontWeight: 500,
+                        fontSize: "1rem",
+                      }}
                     />
                   ))}
                 </Stack>
@@ -152,13 +189,19 @@ const CV = () => {
 
               <Card
                 sx={{
-                  p: 3,
+                  p: 4,
                   height: "100%",
-                  backgroundColor: "#333",
-                  color: "#fff",
+                  backgroundColor: "#fff",
+                  color: "#000",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
+                  borderRadius: 3,
                 }}
               >
-                <Typography variant="h5" gutterBottom>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{ fontWeight: 600, fontSize: "2rem" }}
+                >
                   Education
                 </Typography>
                 <List>
@@ -167,9 +210,15 @@ const CV = () => {
                       primary="B.Sc. in Computer Engineering – Western Norway University of Applied Sciences"
                       secondary="2017 – 2020"
                       primaryTypographyProps={{
-                        sx: { color: "#fff", fontWeight: "bold" },
+                        sx: {
+                          color: "#000",
+                          fontWeight: "600",
+                          fontSize: "1rem",
+                        },
                       }}
-                      secondaryTypographyProps={{ sx: { color: "#fff" } }}
+                      secondaryTypographyProps={{
+                        sx: { color: "#000", fontSize: "1rem" },
+                      }}
                     />
                   </ListItem>
                 </List>
@@ -180,13 +229,19 @@ const CV = () => {
           <Grid item xs={12} md={4}>
             <Card
               sx={{
-                p: 3,
+                p: 4,
                 height: "100%",
-                backgroundColor: "#333",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#000",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
+                borderRadius: 3,
               }}
             >
-              <Typography variant="h5" gutterBottom>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ fontWeight: 600, fontSize: "2rem" }}
+              >
                 Certifications
               </Typography>
               <List>
@@ -198,15 +253,18 @@ const CV = () => {
                         <>
                           Issued by {cert.issuedBy}, {cert.date}
                           <br />
-                          <Link href={cert.url} target="_blank" rel="noopener">
-                            View →
-                          </Link>
                         </>
                       }
                       primaryTypographyProps={{
-                        sx: { color: "#fff", fontWeight: "bold" },
+                        sx: {
+                          color: "#000",
+                          fontWeight: "600",
+                          fontSize: "1rem",
+                        },
                       }}
-                      secondaryTypographyProps={{ sx: { color: "#ccc" } }}
+                      secondaryTypographyProps={{
+                        sx: { color: "#000", fontSize: "1rem" },
+                      }}
                     />
                   </ListItem>
                 ))}
@@ -217,22 +275,28 @@ const CV = () => {
       </Box>
       <Button
         variant="contained"
-        color="inherit"
         href="#projects-section"
         sx={{
           position: "absolute",
           bottom: 40,
           left: "50%",
           transform: "translateX(-50%)",
-          backgroundColor: "#333",
+          mt: 5,
+          px: 2,
+          py: 1,
+          borderRadius: 999,
+          fontWeight: 500,
+          fontSize: "1rem",
+          borderColor: "#0271e3",
+          backgroundColor: "#0271e3",
+          textTransform: "none",
           color: "#fff",
           "&:hover": {
-            backgroundColor: "#fff",
-            color: "#333",
+            backgroundColor: "rgba(002, 113, 227, 0.8)",
           },
         }}
       >
-        Projects ↓
+        More
       </Button>
     </Box>
   );

@@ -44,7 +44,7 @@ const Projects = () => {
         alignItems: "center",
         justifyContent: "center",
         px: 2,
-        backgroundColor: "#333",
+        backgroundColor: "#000",
         color: "#fff",
       }}
     >
@@ -56,7 +56,7 @@ const Projects = () => {
         }}
       >
         <Grid container spacing={3} sx={{ mb: 6 }}>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <Card
               sx={{
                 p: 3,
@@ -66,50 +66,29 @@ const Projects = () => {
               }}
             >
               <Typography variant="h5" gutterBottom>
-                Skills
-              </Typography>
-              <Stack direction="row" spacing={1} flexWrap="wrap">
-                {skills.map((skill, i) => (
-                  <Chip
-                    key={i}
-                    label={skill}
-                    color="primary"
-                    variant="outlined"
-                  />
-                ))}
-              </Stack>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <Card
-              sx={{
-                p: 3,
-                height: "100%",
-                backgroundColor: "#fff",
-                color: "#333",
-              }}
-            >
-              <Typography variant="h5" gutterBottom>
-                Certifications
+                Experience & Education
               </Typography>
               <List>
-                {certifications.map((cert, i) => (
-                  <ListItem key={i}>
-                    <ListItemText
-                      primary={cert.title}
-                      secondary={
-                        <>
-                          Issued by {cert.issuedBy}, {cert.date}
-                          <br />
-                          <Link href={cert.url} target="_blank" rel="noopener">
-                            View Certificate
-                          </Link>
-                        </>
-                      }
-                    />
-                  </ListItem>
-                ))}
+                <ListItem>
+                  <ListItemText
+                    primary="Software Developer – Tech Solutions Inc."
+                    secondary="2020 – Present | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="B.Sc. in Computer Science – University of Tech"
+                    secondary="2014 – 2018"
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
+                  />
+                </ListItem>
               </List>
             </Card>
           </Grid>
@@ -131,37 +110,92 @@ const Projects = () => {
                   <ListItemText
                     primary="Software Developer – Tech Solutions Inc."
                     secondary="2020 – Present | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemText
                     primary="B.Sc. in Computer Science – University of Tech"
                     secondary="2014 – 2018"
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
                   />
                 </ListItem>
               </List>
             </Card>
           </Grid>
+
+          <Grid item xs={12} md={4}>
+            <Card
+              sx={{
+                p: 3,
+                height: "100%",
+                backgroundColor: "#fff",
+                color: "#333",
+              }}
+            >
+              <Typography variant="h5" gutterBottom>
+                Experience & Education
+              </Typography>
+              <List>
+                <ListItem>
+                  <ListItemText
+                    primary="Software Developer – Tech Solutions Inc."
+                    secondary="2020 – Present | Frontend development using React and Node.js."
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="B.Sc. in Computer Science – University of Tech"
+                    secondary="2014 – 2018"
+                    primaryTypographyProps={{
+                      sx: { color: "#333", fontWeight: "bold" },
+                    }}
+                    secondaryTypographyProps={{ sx: { color: "#333" } }}
+                  />
+                </ListItem>
+              </List>
+            </Card>
+          </Grid> */}
+          <Typography variant="h5" gutterBottom>
+            Maintenance ongoing - please check back later!
+          </Typography>
         </Grid>
       </Box>
       <Button
-        variant="contained"
-        color="inherit"
+        variant="outlined"
         href="#social-section"
         sx={{
           position: "absolute",
           bottom: 40,
           left: "50%",
           transform: "translateX(-50%)",
-          backgroundColor: "#fff",
-          color: "#333",
+          mt: 5,
+          px: 2,
+          py: 1,
+          borderRadius: 999,
+          fontWeight: 500,
+          fontSize: "1rem",
+          borderColor: "#0271e3",
+          backgroundColor: "#000",
+          textTransform: "none",
+          color: "#0271e3",
           "&:hover": {
-            backgroundColor: "#333",
+            backgroundColor: "#0271e3",
             color: "#fff",
           },
         }}
       >
-        Connect ↓
+        Connect
       </Button>
     </Box>
   );

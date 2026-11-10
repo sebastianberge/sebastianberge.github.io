@@ -33,3 +33,22 @@ To avoid using any database for hosting the blog posts (and avoid coding them in
 
 ## License
 Distributed under the MIT License. See `LICENSE.txt` for more information.
+## Adding posts and updates
+
+Edit `src/data/publications.js` and add an object to the `publications` array:
+
+```js
+{
+  title: 'Your article title',
+  url: 'https://medium.com/@your-profile/your-article',
+  date: '2026-11-10',
+  source: 'Medium',
+  summary: 'An optional short introduction.',
+}
+```
+
+Use a real publication URL and an ISO date (`YYYY-MM-DD`). Posts appear newest
+first. Titles and summaries stay in the publication's original language; section
+labels and dates follow the selected site language. The array starts empty so
+no example posts are shown to visitors. Commit and deploy changes through the
+normal site workflow; there is no separate admin interface.

@@ -1,115 +1,20 @@
-import React from "react";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import React, { useState } from 'react';
 
-const Navbar = () => {
+export default function Navbar({ t, language, onLanguageChange }) {
+  const [open, setOpen] = useState(false);
+  const links = ['#aboutme-section', '#updates-section', '#cv-section', '#certifications-section', '#social-section'];
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        backgroundColor: "rgba(255, 255, 255, 0.7)",
-        backdropFilter: "blur(10px)",
-        boxShadow: "0 1px 10px rgba(0, 0, 0, 0.1)",
-        top: 0,
-        zIndex: 1100,
-        height: "45px",
-      }}
-    >
-      <Toolbar
-        disableGutters
-        sx={{
-          minHeight: "45px !important",
-          height: "45px !important",
-          px: 2,
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            gap: 4,
-          }}
-        >
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              fontWeight: 900,
-              fontSize: "0.875rem",
-              color: "#000",
-              fontFamily:
-                "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif",
-            }}
-          >
-            Sebastian Berge
-          </Typography>
-          <Box>
-            <Button
-              href="#aboutme-section"
-              sx={{
-                color: "#000",
-                fontWeight: 500,
-                fontSize: "0.8rem",
-                mx: 1.2,
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              About Me
-            </Button>
-            <Button
-              href="#cv-section"
-              sx={{
-                color: "#000",
-                fontWeight: 500,
-                fontSize: "0.8rem",
-                mx: 1.2,
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              CV
-            </Button>
-            <Button
-              href="#projects-section"
-              sx={{
-                color: "#000",
-                fontWeight: 500,
-                fontSize: "0.8rem",
-                mx: 1.2,
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Projects
-            </Button>
-            <Button
-              href="#social-section"
-              sx={{
-                color: "#000",
-                fontWeight: 500,
-                fontSize: "0.8rem",
-                mx: 1.2,
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Connect
-            </Button>
-          </Box>
-        </Box>
-      </Toolbar>
-    </AppBar>
+    <header className="site-header">
+      <div className="container header-inner">
+        <a className="brand" href="#top" onClick={() => setOpen(false)}>sebastian<span className="brand-dot">.</span></a>
+        <nav className={open ? 'navigation is-open' : 'navigation'} id="navigation" aria-label={language === 'no' ? 'Hovedmeny' : 'Main navigation'}>
+          {t.nav.map((label, i) => <a key={links[i]} href={links[i]} onClick={() => setOpen(false)}>{label}{links[i] === '#social-section' && <span aria-hidden="true"> ↗</span>}</a>)}
+        </nav>
+        <div className="header-actions">
+          <button className="language-button" onClick={onLanguageChange} aria-label={t.language}><span className={language === 'no' ? 'selected' : ''}>NO</span><span className="language-divider" aria-hidden="true">/</span><span className={language === 'en' ? 'selected' : ''}>EN</span></button>
+          <button className="menu-button" aria-expanded={open} aria-controls="navigation" aria-label={open ? t.close : t.menu} onClick={() => setOpen(!open)} onKeyDown={e => { if (e.key === 'Escape') setOpen(false); }}>{open ? '×' : '☰'}</button>
+        </div>
+      </div>
+    </header>
   );
-};
-
-export default Navbar;
+}

@@ -83,7 +83,6 @@ h1 > span:not(.title-dot) { font-family: Georgia, 'Times New Roman', serif; font
   .footer { font-size: .65rem; gap: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-
 .detail-section { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 40px; border-top: 1px solid var(--line); padding-block: 38px; }
 .section-note { color: var(--muted); font-size: .78rem; margin-top: 10px; }
 .certification-list { list-style: none; padding: 0; margin: 0; }
